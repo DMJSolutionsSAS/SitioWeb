@@ -1,0 +1,22 @@
+<!-- <p>hero works!</p> -->
+
+
+<div class="container" data-aos="fade-up">
+
+    <div class="row justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+      <div routerLink="" class="col-xl-12 col-lg-8">
+        <h1>DMJ SOLUTIONS<span>.</span></h1>
+        <h2>Tecnologías a tu Servicio</h2>
+      </div>
+    </div>
+
+    <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-3 col-md-4" *ngFor="let h of heros">
+        <div class="icon-box">
+          <i class="{{h.icono}}"></i>
+          <h3><a>{{h.name}}</a></h3>
+        </div>
+      </div>
+    </div>
+
+  </div>

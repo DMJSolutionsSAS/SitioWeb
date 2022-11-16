@@ -1,0 +1,10 @@
+<!-- <p>swiper works!</p> -->
+
+<swiper [config]="config" class="container">
+    <div class="swiper-wrapper align-items-center">
+      <img class="swiper-slide box-img-producto" 
+         *ngFor="let img of herramientas"
+          [src]="img.src" [alt]="img.alt" />
+    </div>
+    <div class="swiper-pagination"></div>  
+</swiper> 

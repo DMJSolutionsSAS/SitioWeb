@@ -1,0 +1,46 @@
+[
+    {
+      "src": "assets/img/dmj/herramientas/laravel.png",
+      "alt": "Image 1"
+    },
+    {
+      "src": "assets/img/dmj/herramientas/php.png",
+      "alt": "Image 2"
+    },
+    {
+      "src": "assets/img/dmj/herramientas/html.png",
+      "alt": "Image 3"
+    },
+    {
+      "src": "assets/img/dmj/herramientas/bootstrap.png",
+      "alt": "Image 4"
+    },
+    {
+      "src": "assets/img/dmj/herramientas/ionic.png",
+      "alt": "Image 5"
+    },
+    {
+      "src": "assets/img/dmj/herramientas/angular.png",
+      "alt": "Image 6"
+    },
+    {
+      "src": "assets/img/dmj/herramientas/nodejs.png",
+      "alt": "Image 7"
+    },
+    {
+      "src": "assets/img/dmj/herramientas/java.png",
+      "alt": "Image 8"
+    },
+    {
+      "src": "assets/img/dmj/herramientas/net.png",
+      "alt": "Image 9"
+    },
+    {
+      "src": "assets/img/dmj/herramientas/mysql.png",
+      "alt": "Image 10"
+    },
+    {
+        "src": "assets/img/dmj/herramientas/redes.png",
+        "alt": "Image 11"
+      }
+  ]

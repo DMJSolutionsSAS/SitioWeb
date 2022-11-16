@@ -1,0 +1,20 @@
+[
+    {
+        "icono": "bi bi-geo-alt",
+        "name": "Localización",
+        "detalle": "Barrio 25 de Septiembre - La Libertad - Ecuador",
+        "clase": "address"
+    },
+    {
+        "icono": "bi bi-envelope",
+        "name": "Email",
+        "detalle": "dmjsolutions-sas@outlook.com",
+        "clase": "email"
+    },
+    {
+        "icono": "bi bi-phone",
+        "name": "N° Celular",
+        "detalle": "+593 979569707",
+        "clase": "phone"
+    }
+]

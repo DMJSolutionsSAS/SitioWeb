@@ -1,0 +1,126 @@
+<!-- <p>contact works!</p> -->
+
+
+
+
+<div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Contacto</h2>
+      <p>Contactanos</p>
+    </div>
+
+    <div>
+      <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.7899546814374!2d-80.90306658579395!3d-2.232506338018541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902e0ed504892855%3A0xae5aae137af318ce!2sC.%2029%2C%20La%20Libertad!5e0!3m2!1ses!2sec!4v1668132565568!5m2!1ses!2sec"
+               width="100%" height="270px" style="border:0;" 
+               allowfullscreen="" loading="lazy" 
+               referrerpolicy="no-referrer-when-downgrade">
+      </iframe>   
+    </div>
+
+    <div class="row mt-5">
+
+      <div class="col-lg-4">
+        <div class="info">
+
+          <div [class]="c.clase" *ngFor="let c of contactos" >
+            <i class="{{c.icono}}"></i>
+            <h4>{{c.name}}:</h4>
+            <p>{{c.detalle}}</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-8 mt-5 mt-lg-0">
+
+        <form role="form" [formGroup]="formulario" (ngSubmit)="guardarDatos()" class="php-email-form">
+          <div class="row">
+
+            <div class="col-md-6 form-group">
+              <input type="text" class="form-control" placeholder="Nombres: Juan Lino"
+               formControlName="name" (keypress)="validarLetras($event)"
+               [ngClass]="(submitted && f['name'].errors) || (f['name'].touched || f['name'].dirty) ? 'is-invalid': ''"
+               [ngClass]="f['name'].valid ? 'is-valid' : ''">
+
+                <div *ngIf="submitted || (f['name'].touched || f['name'].dirty)">
+                    <small *ngIf="f['name'].errors?.['required']" class="text-danger">
+                        Nombre es requerido
+                    </small>
+
+                    <small *ngIf="f['name'].errors?.['minlength']" class="text-danger">
+                        Mínimo 3 caracteres
+                    </small>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" placeholder="Email: juan-lino@gmail.com" 
+                formControlName="email" (keyup)="validarCorreo($event)"
+                [ngClass]="(submitted && f['email'].errors) || (f['email'].touched || f['email'].dirty  || !emailValid) ? 'is-invalid': ''"
+                [ngClass]="f['email'].valid && emailValid ? 'is-valid': ''">
+
+                <div *ngIf="submitted || (f['email'].touched || f['email'].dirty)">
+                    <small *ngIf="f['email'].errors?.['required']" class="text-danger">
+                        Correo es requerido
+                    </small>
+
+                    <small *ngIf="f['email'].errors?.['email']" class="text-danger">
+                        Formato del correo es incorrecto !!
+                    </small>
+                </div>
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" placeholder="Asunto"
+                formControlName="asunto" (keypress)="validarLetras($event)"
+               [ngClass]="(submitted && f['asunto'].errors) || (f['asunto'].touched || f['asunto'].dirty) ? 'is-invalid': ''"
+               [ngClass]="f['asunto'].valid ? 'is-valid' : ''">
+
+               <div *ngIf="submitted || (f['asunto'].touched || f['asunto'].dirty)">
+                    <small *ngIf="f['asunto'].errors?.['required']" class="text-danger">
+                        Asunto es requerido
+                    </small>
+
+                    <small *ngIf="f['asunto'].errors?.['minlength']" class="text-danger">
+                        Mínimo 3 caracteres
+                    </small>
+                </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <textarea type="text"  placeholder="Mensajes" formControlName="mensaje"  class="form-control" rows="3"
+                    (keypress)="validarAlfaNumerico($event)" 
+                    [ngClass]="(submitted && f['mensaje'].errors) || (f['mensaje'].touched || f['mensaje'].dirty) ? 'is-invalid': ''"
+                    [ngClass]="f['mensaje'].valid ? 'is-valid' : ''">
+
+                    <div *ngIf="submitted || (f['mensaje'].touched || f['mensaje'].dirty)">
+                        <small *ngIf="f['mensaje'].errors?.['required']" class="text-danger">
+                            Mensaje es requerido
+                        </small>
+    
+                        <small *ngIf="f['mensaje'].errors?.['minlength']" class="text-danger">
+                            Mínimo 3 caracteres
+                        </small>
+                    </div>
+            </textarea>
+          </div>
+
+          <!-- <div class="my-3">
+            <div class="loading">Cargando...</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Tu mensaje ha sido enviado correctamente. Gracias por tu visita!</div>
+          </div> -->
+          <div class="text-center">
+            <button type="submit" [disabled]="formulario.invalid || okButton || emailValid">Enviar Mensaje</button>
+        </div>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>

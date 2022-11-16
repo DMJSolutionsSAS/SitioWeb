@@ -1,0 +1,40 @@
+
+[
+    {
+        "id": 1,
+        "menu": "Inicio",
+        "href": "hero",
+        "active":true
+    },
+    {
+        "id": 2,
+        "menu": "Nosotros",
+        "href": "about",
+        "active":false
+
+    },
+    {
+        "id": 3,
+        "menu": "Servicios",
+        "href": "services",
+        "active":false
+    },
+    {
+        "id": 4,
+        "menu": "Portfolio",
+        "href": "portfolio",
+        "active":false
+    },
+    {
+        "id": 5,
+        "menu": "Grupo",
+        "href": "team",
+        "active":false
+    },
+    {
+        "id": 6,
+        "menu": "Contacto",
+        "href": "contact",
+        "active":false
+    }
+]

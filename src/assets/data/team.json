@@ -1,0 +1,123 @@
+[
+    {
+      "src": "assets/img/dmj/team/darling.jpg",
+      "alt": "1",
+      "ws": "", 
+      "tw": "", 
+      "fb": "#",
+      "ig": "#",
+      "ln": "#",
+      "name": "Darling De La Cruz",
+      "specialty": "Presidente - Desarrollador De Software."
+    },
+    {
+      "src": "assets/img/dmj/team/juan.jpg",
+      "alt": "2",
+      "ws": "https://wa.me/593968772111",
+      "tw": "#",
+      "fb": "https://www.facebook.com/juancarlos.galarzaarias",
+      "ig": "https://www.instagram.com/juancarlosl40/",
+      "ln": "https://www.linkedin.com/in/juan-carlos-galarza-arias-94542a255/",
+      "name": "Juan Carlos Galarza",
+      "specialty": "Gerente General - Desarrollador De Software."
+    },
+    {
+      "src": "assets/img/dmj/team/danny.jpg",
+      "alt": "3",
+      "ws": "https://wa.me/593979569707",
+      "tw": "https://twitter.com/SSaul1998",
+      "fb": "https://www.facebook.com/dannySa01.chavez.520",
+      "ig": "https://www.instagram.com/danny.saul01/",
+      "ln": "https://www.linkedin.com/in/danny-ch%C3%A1vez-yagual-a6a916254/",
+      "name": "Danny Chávez",
+      "specialty": "Secretario - Desarrollador De Software Web - Escritorio - Redes & Comunicaciones."
+    },
+    {
+      "src": "assets/img/dmj/team/dalton.jpg",
+      "alt": "4",
+      "ws": "https://wa.me/593999314187",
+      "tw": "#",
+      "fb": "https://www.facebook.com/daltonskater.santistevan",
+      "ig": "https://www.instagram.com/dalton_skateboard/",
+      "ln": "https://www.linkedin.com/in/dalton-santistevan-149929239/",
+      "name": "Dalton Santistevan",
+      "specialty": "Vice-Presidente - Desarrollador De Software."
+    },
+    {
+      "src": "assets/img/dmj/team/mario.jpg",
+      "alt": "5",
+      "ws": "#",
+      "tw": "#",
+      "fb": "#",
+      "ig": "#",
+      "ln": "#",
+      "name": "Mario Basilio",
+      "specialty": "Desarrollador De Software & Aplicaciones Móviles."
+    },
+    {
+      "src": "assets/img/dmj/team/josue.jpg",
+      "alt": "6",
+      "ws": "https://wa.me/593996173833",
+      "tw": "https://twitter.com/joss_tt25",
+      "fb": "https://www.facebook.com/josue.tomala.hola/",
+      "ig": "https://www.instagram.com/josue.tt/",
+      "ln": "#",
+      "name": "Josue Tomalá",
+      "specialty": "Desarrollador De Software."
+    },
+    {
+      "src": "assets/img/dmj/team/gisella.jpg",
+      "alt": "7",
+      "ws": "https://wa.me/593982677211",
+      "tw": "#",
+      "fb": "https://www.facebook.com/gvtp04",
+      "ig": "https://www.instagram.com/gisella_viviana/",
+      "ln": "https://www.linkedin.com/in/gisella-tircio-6319791a5/",
+      "name": "Gisella Tircio",
+      "specialty": "Desarrollador de Software & Especialista en Gestión de Proyectos."
+    },
+    {
+      "src": "assets/img/team/team-3.jpg",
+      "alt": "8",
+      "ws": "#",
+      "tw": "#",
+      "fb": "#",
+      "ig": "#",
+      "ln": "#",
+      "name": "Joel Balseca",
+      "specialty": "Desarrollador De Software."
+    },
+    { 
+      "src": "assets/img/dmj/team/george.jpeg",
+      "alt": "9",
+      "ws": "https://wa.me/593960884936",
+      "tw": "#",
+      "fb": "https://www.facebook.com/george.ramirezq94",
+      "ig": "https://www.instagram.com/georgi_rmz/",
+      "ln": "#",
+      "name": "George Ramírez",
+      "specialty": "Diseñador Gráfico & Desarrollador De Software."
+    },
+    {
+      "src": "assets/img/team/team-3.jpg",
+      "alt": "10",
+      "ws": "#",
+      "tw": "#",
+      "fb": "#",
+      "ig": "#",
+      "ln": "#",
+      "name": "Marlon Ortiz",
+      "specialty": "Especialista en Hardware."
+    },
+    {
+      "src": "assets/img/team/team-3.jpg",
+      "alt": "11",
+      "ws": "#",
+      "tw": "#",
+      "fb": "#",
+      "ig": "#",
+      "ln": "#",
+      "name": "Adrián Bacilio",
+      "specialty": "Desarrollador De Software."
+    }
+]

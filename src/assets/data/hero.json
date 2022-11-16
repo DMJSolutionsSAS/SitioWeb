@@ -1,0 +1,34 @@
+[
+    {
+        "icono": "ri-slideshow-line",
+        "name": "Desarrollo de Software"
+    },
+    {
+        "icono": "ri-phone-find-line",
+        "name": "Desarrollo de Aplicaciones Móviles"
+    },
+    {
+        "icono": "ri-computer-line",
+        "name": "Desarrollo Web & Diseño Gráfico"
+    },
+    {
+        "icono": "ri-settings-3-line",
+        "name": "Mantenimiento de Software y Hardware"
+    },
+    {
+        "icono": "ri-stackshare-line",
+        "name": "Redes"
+    },
+    {
+        "icono": "ri-shield-check-line",
+        "name": "Seguridad"
+    },
+    {
+        "icono": "ri-file-chart-line",
+        "name": "Elaboración de Proyectos Titulares"
+    },
+    {
+        "icono": "ri-clapperboard-line",
+        "name": "Cursos Varios"
+    }
+]

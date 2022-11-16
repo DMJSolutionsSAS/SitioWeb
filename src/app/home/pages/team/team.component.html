@@ -1,0 +1,52 @@
+<!-- <p>team works!</p> -->
+
+
+<div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Grupo</h2>
+      <p>Nuestro Grupo De Trabajo.</p>
+    </div>
+
+    <div class="row">
+       <div class="col-lg-3 col-md-6 d-flex align-items-stretch" *ngFor="let t of teams">
+        <div class="member" data-aos="fade-up" data-aos-delay="300">
+          <div class="member-img"> 
+            <img [src]="t.src" class="img-fluid" [alt]="t.alt">
+            <div class="social">
+              <a *ngIf="(t.ws !== '#' ? t.ws : '')"
+                  [ngClass]="{'disabled': t.ws === '#'} && {'disabled': t.ws === ' '}" 
+                  target="_blank" href="{{t.ws}}">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+              <a *ngIf="(t.tw !== '#' ? t.tw : '')" 
+                  [ngClass]="{'disabled': t.tw === '#'} && {'disabled': t.tw === ' '}" 
+                  target="_blank" href="{{t.tw}}">
+                <i class="bi bi-twitter"></i>
+              </a>
+              <a *ngIf="(t.fb !== '#' ? t.fb : '')" 
+                  [ngClass]="{'disabled': t.fb === '#'} && {'disabled': t.fb === ' '}" 
+                  target="_blank" href="{{t.fb}}">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a *ngIf="(t.ig !== '#' ? t.ig : '')" 
+                  [ngClass]="{'disabled': t.ig === '#'} && {'disabled': t.ig === ' '}" 
+                  target="_blank" href="{{t.ig}}">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a *ngIf="(t.ln !== '#' ? t.ln : '')"
+                 [ngClass]="{'disabled': t.ln === '#'} && {'disabled': t.ln === ' '}" 
+                 target="_blank" href="{{t.ln}}">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Ing. {{t.name}}</h4>
+            <span>{{t.specialty}}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
