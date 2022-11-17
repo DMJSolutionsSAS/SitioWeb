@@ -1,10 +1,27 @@
 <!-- <p>swiper works!</p> -->
+<div class="container" data-aos="fade-right">
+  <div class="section-title">
+    <h2>Tecnologías y herramientas</h2>
+    <p>Utilizamos herramientas solidas y modernas.</p>
+  </div>
+</div>
+
 
 <swiper [config]="config" class="container">
-    <div class="swiper-wrapper align-items-center">
-      <img class="swiper-slide box-img-producto" 
-         *ngFor="let img of herramientas"
+  <div class="swiper-wrapper align-items-center">
+    <img class="swiper-slide box-img-producto" *ngFor="let img of herramientas"
+        [src]="img.src" [alt]="img.alt" />
+  </div>
+  <div class="swiper-pagination"></div>  
+</swiper> 
+
+
+<!-- <swiper [config]="config" class="container">
+  <div class="swiper-wrapper align-items-center">
+    <div class="swiper-slide">
+      <img class="box-img-producto" *ngFor="let img of herramientas"
           [src]="img.src" [alt]="img.alt" />
     </div>
-    <div class="swiper-pagination"></div>  
-</swiper> 
+  </div>
+  <div class="swiper-pagination"></div> 
+</swiper>  -->

@@ -13,7 +13,6 @@ export class NavComponent {
 
   Active:boolean = false;
 
-
   constructor(private renderer: Renderer2,private _ns:NavService) { }
 
   openCloseMenu(){  

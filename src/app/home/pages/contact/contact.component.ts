@@ -64,26 +64,25 @@ export class ContactComponent implements OnInit {
   
     validarCorreo(event: any) {
       this.emailValid = this._vs.validarEmail(event);
-      console.log('email',this.emailValid);
-      
-
+      console.log('email', this.emailValid);      
     }
 
     guardarDatos(){
       this.submitted = true;
-      if(this.emailValid !== false){
-        const form = this.formulario.value;
-    
+      
+      const form = this.formulario.value;
+      
+      if(form.email !== true){
         if(this.formulario.valid){
-          this.submitted = false;  this.okButton = true;
-    
-          this.miJson(form);
+            this.submitted = false;  this.okButton = true; 
+            this.miJson(form);
         }else{
-          alert("formulario invalido");
-          this.okButton = true;
+            // alert("formulario invalido");
+            this.okButton = true;
         }    
       }else{
-        alert('correo invalido')
+        // alert('email incorrecto');
+        this.okButton = true;
       }
     }
 
@@ -104,7 +103,7 @@ export class ContactComponent implements OnInit {
       //this.guardarContact(this.nuevo); 
     }
 
-    guardarContact(json:any){
+    guardarContact(json:NewContact){
       this._cs.save(json).subscribe( (res:any) =>{
         if(res.status){
           alert(res.mensaje);

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ContactI } from '../interfaces/interfaz.interface';
+import { ContactI, NewContact } from '../interfaces/interfaz.interface';
 import { BaseService } from './base.service';
 
 @Injectable({
@@ -21,7 +21,7 @@ export class ContactService {
     });
   }
 
-  save(data:any){
+  save(data:NewContact){
     let url = this.bs.getUrl() + '/formulario';
     return this.http.post(url,data);
   }

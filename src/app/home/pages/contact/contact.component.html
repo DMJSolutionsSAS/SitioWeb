@@ -90,7 +90,7 @@
                     </small>
                 </div>
           </div>
-
+ 
           <div class="form-group mt-3">
             <textarea type="text"  placeholder="Mensajes" formControlName="mensaje"  class="form-control" rows="3"
                     (keypress)="validarAlfaNumerico($event)" 
@@ -115,7 +115,7 @@
             <div class="sent-message">Tu mensaje ha sido enviado correctamente. Gracias por tu visita!</div>
           </div> -->
           <div class="text-center">
-            <button type="submit" [disabled]="formulario.invalid || okButton || emailValid">Enviar Mensaje</button>
+            <button type="submit" [disabled]="formulario.invalid || okButton || !emailValid">Enviar Mensaje</button>
         </div>
         </form>
 
