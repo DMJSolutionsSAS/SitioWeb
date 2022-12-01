@@ -181,7 +181,7 @@ h6 {
 }
 
 .get-started-btn:hover {
-  background: #ffbb38;
+  background: var(--color-principal);
   color: #343a40;
 }
 

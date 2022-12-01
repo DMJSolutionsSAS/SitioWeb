@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ContactI, NewContact } from '../interfaces/interfaz.interface';
-import { BaseService } from './base.service';
+import { addDoc, collection, Firestore } from '@angular/fire/firestore';
+import { ContactI, ContactFireI } from '../interfaces/interfaz.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -10,10 +10,7 @@ export class ContactService {
 
   public _contact: ContactI [] = [];
 
-  constructor(
-    private http:HttpClient, 
-    private bs:BaseService
-    ) { this.mostrarHero(); }
+  constructor( private http:HttpClient, private fireStore: Firestore) { this.mostrarHero(); }
 
   private mostrarHero(){
     this.http.get<ContactI[]>('assets/data/contacto.json').subscribe( (res) => {
@@ -21,9 +18,9 @@ export class ContactService {
     });
   }
 
-  save(data:NewContact){
-    let url = this.bs.getUrl() + '/formulario';
-    return this.http.post(url,data);
+  saveContact(contact : ContactFireI){
+    const contactRef = collection(this.fireStore, 'contact');
+    return addDoc(contactRef , contact);
   }
 
 }

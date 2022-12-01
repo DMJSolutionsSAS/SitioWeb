@@ -10,9 +10,7 @@ export class TeamsService {
 
   public _teams: TeamI [] = [];
  
-  constructor(private http: HttpClient) { 
-    this.mostrarTeams();
-  }
+  constructor(private http: HttpClient) { this.mostrarTeams(); }
 
   private mostrarTeams() {
     this.http.get<TeamI[]>('assets/data/team.json').subscribe( (res) => {

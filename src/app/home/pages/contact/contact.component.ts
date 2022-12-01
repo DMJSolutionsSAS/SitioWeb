@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../../../services/contact.service';
 import { ValidacionesService } from '../../../services/validaciones.service';
-import { NewContact } from '../../../interfaces/interfaz.interface';
+import { NewContact, ContactFireI } from '../../../interfaces/interfaz.interface';
+import { Swal2Service } from '../../../services/swal2.service';
+
 
 @Component({
   selector: 'app-contact',
@@ -16,33 +18,28 @@ export class ContactComponent implements OnInit {
   public emailValid = false;
   public okButton = false;
 
-  public nuevo!: NewContact;
+  public nuevo!: NewContact;//ya no
 
-  constructor(
-    private _cs:ContactService,
-    private formBuiler: FormBuilder,
-    private _vs:ValidacionesService) { }
+  public newContact!: ContactFireI;
+
+  constructor( private _cs:ContactService, private formBuiler: FormBuilder, private _vs:ValidacionesService, private _sw2: Swal2Service) { }
 
     get contactos (){
       return this._cs._contact;
     }  
 
     ngOnInit(): void {
-      this.init();
+      this.initContact();
       this.iniciarFormularios(); 
     }
 
-    init(){
-      this.nuevo = {
-        usuario:{
-          name:'',
-          email:''
-        },
-        contacto:{
-          asunto:'',
-          mensaje:''
-        }
-      };
+    initContact(){
+      this.newContact = {
+        name:'',
+        email:'',
+        asunto:'',
+        mensaje:'',
+      }
     }
   
     iniciarFormularios() {
@@ -71,54 +68,35 @@ export class ContactComponent implements OnInit {
       this.submitted = true;
       
       const form = this.formulario.value;
-      
+ 
       if(form.email !== true){
-        if(this.formulario.valid){
-            this.submitted = false;  this.okButton = true; 
-            this.miJson(form);
-        }else{
-            // alert("formulario invalido");
-            this.okButton = true;
+        if(this.formulario.valid){ 
+          this.submitted = false;  this.okButton = true; 
+          this.guardarContact(form);
+        }else{ 
+          this.okButton = true; 
         }    
-      }else{
-        // alert('email incorrecto');
+      }else{ 
         this.okButton = true;
       }
     }
 
-    miJson(form:any){
-      this.nuevo = {
-        usuario:{
-          name:form.name,
-          email:form.email
-        },
-        contacto:{
-          asunto:form.asunto,
-          mensaje:form.mensaje
-        }
-      };
-
-      console.log(this.nuevo);
-      
-      //this.guardarContact(this.nuevo); 
-    }
-
-    guardarContact(json:NewContact){
-      this._cs.save(json).subscribe( (res:any) =>{
-        if(res.status){
-          alert(res.mensaje);
-          this.init();
-          this.formulario.reset();
-        }else{
-          alert(res.mensaje);
-          this.init();
-          this.formulario.reset();
-        }
-      });
+    async guardarContact(form:ContactFireI){
+      const res = await this._cs.saveContact(form);  
+      if(res){
+        this._sw2.successSwal('Contacto','Se registro con éxito 🚀');
+        this.initContact();
+        this.formulario.reset();
+      }else{
+        this._sw2.errorSwal('Contacto','No se puede registrar 📛');
+        this.initContact();
+        this.formulario.reset();
+      }
     }
   
     get f() {
       return this.formulario.controls;
     }
+
 
 }

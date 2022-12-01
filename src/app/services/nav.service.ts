@@ -9,9 +9,7 @@ export class NavService {
 
   public _nav: NavI [] = [];
 
-  constructor(private http:HttpClient) {
-    this.mostrarNav();
-   }
+  constructor(private http:HttpClient) { this.mostrarNav(); }
 
   private mostrarNav(){
     this.http.get<NavI[]>('assets/data/nav.json').subscribe( (res) => {

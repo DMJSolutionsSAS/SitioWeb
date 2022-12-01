@@ -1,0 +1,90 @@
+[
+    {
+
+        "empresa" : "DMJ SOLUTIONS",
+        "direccion" : "La Libertad, Calle 29 entre Av. 20 & 21",
+        "lugar" : "Santa Elena, Ecuador",
+        "celular" : "979569707",
+        "correo" : "dmjsolutions-sas@outlook.com",
+        "anio" : "2022",
+        "redes_sociales_empresa" : [
+            {
+                "href" : "https://www.twitter.com/dmj_Solutions",
+                "icon" : "bx bxl-twitter",
+                "class" : "twitter"
+            },
+            {
+                "href" : "https://www.facebook.com/dmjsolutionssas",
+                "icon" : "bx bxl-facebook",
+                "class" : "facebook"
+            },
+            {
+                "href" : "https://www.instagram.com/dmjsolutionssas",
+                "icon" : "bx bxl-instagram",
+                "class" : "instagram"
+            },
+            {
+                "href" : "https://www.linkedin.com/company/dmj-solutions-ec/",
+                "icon" : "bx bxl-linkedin",
+                "class" : "linkedin"
+            }
+        ],
+        "utiles" : [
+            {
+                "href" : "#",
+                "name" : "Inicio"
+            },
+            {
+                "href" : "#",
+                "name" : "Conócenos"
+            },
+            {
+                "href" : "#",
+                "name" : "Servicios"
+            },
+            {
+                "href" : "#",
+                "name" : "Términos y Condiciones"
+            },
+            {
+                "href" : "#",
+                "name" : "Políticas de Privacidad"
+            }
+        ],
+        "nuestro_servicio" : [
+            {
+                "href" : "#",
+                "servicio" : "Desarrollo de Software"
+            },
+            {
+                "href" : "#",
+                "servicio" : "Desarrollo de Aplicaciones Móviles"
+            },
+            {
+                "href" : "#",
+                "servicio" : "Desarrollo Web & Diseño Gráfico"
+            },
+            {
+                "href" : "#",
+                "servicio" : "Mantenimiento de Software y Hardware"
+            },
+
+            {
+                "href" : "#",
+                "servicio" : "Redes"
+            },
+            {
+                "href" : "#",
+                "servicio" : "Seguridad"
+            },
+            {
+                "href" : "#",
+                "servicio" : "Elaboración de Proyectos Titulares"
+            },
+            {
+                "href" : "#",
+                "servicio" : "Cursos Varios"
+            }
+        ]
+    }
+]

@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../shared/shared.module';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { TemplateComponent } from './pages/template/template.component';
 import { HeroComponent } from './pages/hero/hero.component';
@@ -17,10 +19,11 @@ import { CountsComponent } from './pages/counts/counts.component';
 import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
 import { TeamComponent } from './pages/team/team.component';
 import { ContactComponent } from './pages/contact/contact.component';
-
-
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetallePortafolioComponent } from './pages/detalle-portafolio/detalle-portafolio.component';
+
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
+
 
 
 @NgModule({
@@ -45,7 +48,8 @@ import { DetallePortafolioComponent } from './pages/detalle-portafolio/detalle-p
     SharedModule,
     NgxUsefulSwiperModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SweetAlert2Module
   ],
   exports: [
     TemplateComponent,

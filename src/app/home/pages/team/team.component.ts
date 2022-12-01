@@ -12,5 +12,8 @@ export class TeamComponent {
     
   get teams(){
     return this._ts._teams;
-  }
+  } 
+
+
+  
 }
